@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<title>Dashboard</title>
+
+	<style type="text/css">
+	
+	body{
+		background-color: powderblue;
+		margin: 0;
+	}
+	.sidebar{
+		border-right: 2px solid black;
+		width: 300px;
+		height: 746px;
+		background-color: steelblue;
+	}
+	.left{
+		padding: 30px 0 0 10px;
+		background-color: steelblue;
+	}
+	.left img{
+		border-radius: 360px;
+		width: 90px;
+		height: 90px;
+		border: 2px solid limegreen;
+		cursor: pointer;
+	}
+	.left img:hover{
+		border: 2px solid deepskyblue;
+	}
+	.left h3{
+		position: absolute;
+		left: 125px;
+		top: 45px;
+		font-family: Arial;
+		color: white;
+	}
+	.left p{
+		position: absolute;
+		left: 125px;
+		top: 75px;
+		font-family: Arial;
+		font-size: 15px;
+		color: white;
+	}
+	.logOut{
+		padding: 30px 0 40px 50px;
+		border-bottom: 2px solid black;
+		background-color: steelblue;
+	}
+	.logOut a{
+		width: 300px;
+		font-size: 15px;
+		padding: 10px 60px 10px 60px;
+		border-radius: 50px;
+		background: repeating-linear-gradient(steelblue, lightblue);
+		cursor: pointer;
+		text-decoration: none;
+		color: white;
+		font-family: Arial;
+	}
+	.logOut a:hover{
+		border: 2px solid white;
+		color: white;
+	}
+	.house{
+		padding: 70px 0 0 10px;
+	}
+	.material-icons{
+		font-size: 50px;
+		color: powderblue;
+		cursor: pointer;
+	}
+	.material-icons:hover{
+		color: white;
+	}
+	.house p{
+		position: absolute;
+		left: 85px;
+		top: 285px;
+		font-family: Arial;
+		font-size: 20px;
+		cursor: pointer;
+		color: white;
+	}
+	.medkit{
+		padding: 20px 0 0 10px;
+	}
+	.medkit p{
+		position: absolute;
+		left: 85px;
+		top: 355px;
+		font-family: Arial;
+		font-size: 20px;
+		cursor: pointer;
+		color: white;
+	}
+	.calendar{
+		padding: 20px 0 0 15px;
+	}
+	.fa-calendar-alt{
+		font-size: 45px;
+		color: powderblue;
+		cursor: pointer;
+	}
+	.fa-calendar-alt:hover{
+		color: white;
+	}
+	.calendar p{
+		position: absolute;
+		left: 85px;
+		top: 430px;
+		font-family: Arial;
+		font-size: 20px;
+		cursor: pointer;
+		font-weight: normal;
+		color: white;
+	}
+	.fa-bookmark{
+		font-size: 45px;
+		color: powderblue;
+		cursor: pointer;
+	}
+	.fa-bookmark:hover{
+		color: white;
+
+	}	
+	.bookMark p{
+		position: absolute;
+		left: 85px;
+		top: 500px;
+		font-family: Arial;
+		font-size: 20px;
+		cursor: pointer;
+		font-weight: normal;
+		color: white;
+	}
+	.bookMark{
+		padding: 30px 0 0 17px;
+	}
+	.setting{
+		padding: 20px 0 0 9px;
+	}
+	.setting p{
+		position: absolute;
+		left: 85px;
+		top: 570px;
+		font-family: Arial;
+		font-size: 20px;
+		cursor: pointer;
+		color: white;
+	}
+	.home h2{
+		position: absolute;
+		left: 380px;
+		top: 5px;
+		font-family: Arial;
+	}
+	.status h2{
+		position: absolute;
+		left: 380px;
+		top: 350px;
+		font-family: Arial;
+	}
+	.consult h2{
+		position: absolute;
+		left: 940px;
+		top: 395px;
+		font-family: Arial;
+	}
+	.realdate p{
+		position: absolute;
+		left: 1365px;
+		top: 25px;
+		font-family: Arial;
+		letter-spacing: 2px;
+	}
+	#top{
+		position: absolute;
+		left: 1360px;
+		top: 5px;
+		font-family: Arial;
+		letter-spacing: 2px;
+		font-weight: lighter;
+		font-size: 15px;
+	}
+	#chO{
+		width: 450px;
+		height: auto;
+		position: absolute;
+		left: 430px;
+		top: 70px;
+		border-radius: 60px;
+		border: 2px solid black;
+	}
+	#chT{
+		width: 450px;
+		height: auto;
+		position: absolute;
+		left: 970px;
+		top: 65px;
+		border-radius: 60px;
+		border: 2px solid black;
+	}
+	#chTh{
+		width: 450px;
+		height: auto;
+		position: absolute;
+		left: 970px;
+		top: 470px;
+		border-radius: 30px;
+		border: 2px solid black;
+	}
+	#cO{
+		width: 220px;
+		height: auto;
+		position: absolute;
+		left: 430px;
+		top: 410px;
+		border: 2px solid black;
+		border-radius: 20px;
+	}
+	#cTh{
+		width: 220px;
+		height: auto;
+		position: absolute;
+		left: 660px;
+		top: 410px;
+		border: 2px solid black;
+		border-radius: 20px;
+	}
+	#cF{
+		width: 220px;
+		height: auto;
+		position: absolute;
+		left: 430px;
+		top: 555px;
+		border: 2px solid black;
+		border-radius: 20px;
+	}
+	#cTw{
+		width: 220px;
+		height: auto;
+		position: absolute;
+		left: 660px;
+		top: 555px;
+		border: 2px solid black;
+		border-radius: 20px;
+	}
+	.date i{
+		position: absolute;
+		left: 1480px;
+		top: 20px;
+		font-size: 30px;
+		background-color: antiquewhite;
+		border-radius: 5px;
+		padding: 5px;
+
+	}
+</style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+<div class="left">
+	
+	<img src="myko.jpg">
+	<h3>Cacal, Myko C.</h3>
+	<p>Cacal@gmail.com</p>
+
+</div>
+
+<div class="logOut">
+	
+	<a href="index.html">Log Out</a>
+</div>
+
+<div class="house">
+	<i class="material-icons">home<p>Home</p></i>
+</div>
+
+<div class="medkit">
+	<i class="material-icons">local_hospital<p>All Doctors</p></i>
+</div>
+
+<div class="calendar">
+	<i class='fas fa-calendar-alt'><p>Schedule</p></i>
+</div>
+
+<div class="bookMark">
+	<i class='fas fa-bookmark'><p>My Bookings</p></i>
+</div>
+
+<div class="setting">
+	<i class="material-icons">settings<p>Settings</p></i>
+</div>
+
+
+
+<div class="home">
+	<h2>Home</h2>
+</div>
+
+<div class="status">
+	<h2>Status</h2>
+</div>
+
+<div class="consult">
+	<h2>Upcoming Consultation</h2>
+</div>
+
+<div class="date">
+	<i class="fa fa-calendar"></i>
+</div>
+
+<div class="realdate">
+	<p id="top">Today's Date</p>
+	<p><b>2024-11-27</b></p>
+</div>
+
+
+	<img src="chartOne.png" id="chO">
+	<img src="chartTwo.png" id="chT">
+	<img src="chartThree.png" id="chTh">
+
+	<img src="chOne.png" id="cO">
+	<img src="chThree.png" id="cTh">
+	<img src="chFour.png" id="cF">
+	<img src="chTwo.png" id="cTw">
+
+
+
+</body>
+</html>

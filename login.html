@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<title>Log In</title>
+
+	<style type="text/css">
+
+		body{
+			background-color: lightblue;
+			margin: 0;
+			
+		}
+		.navi img{
+			width: 50px;
+			height: 50px;
+			border-radius: 360px;
+			position: absolute;
+			left: 13px;
+			top: 12px;
+			border: 1px solid black;
+			cursor: pointer;
+		}
+		.navi img:hover{
+			transform: scale(1.1);
+			transition: 0.5s ease-in-out;
+			border: 1px solid deepskyblue;
+		}
+		.navi h3{
+			padding: 10px 0 0 65px;
+			margin: 0;
+			font-family: Arial;
+			color: white;
+			letter-spacing: 1px;
+			text-shadow: 1px 0 black, 0 1px black, 1px 0 black, 0 1px black;
+		}
+		.navi h5{
+			padding: 4px 0 0 90px;
+			margin: 0;
+			font-family: Arial;
+			color: white;
+			letter-spacing: 5px;
+			text-shadow: 1px 0 black, 0 1px black, 1px 0 black, 0 1px black;
+		}
+		.navi ul{
+			position: fixed;
+			left: 700px;
+			top: 15px;
+		}
+		.navi li{
+			padding: 21px;
+			margin: 15px;
+			list-style-type: none;
+			display: inline;
+			font-family: Arial;
+			color: white;
+			letter-spacing: 1px;
+			cursor: pointer;
+			font-size: 20px;
+		}
+		.navi li:hover{
+			background: linear-gradient(steelblue, lightsteelblue);
+		}
+		.navi input{
+			width: 140px;
+			height: 10px;
+			position: fixed;
+			left: 400px;
+			top: 25px;
+			padding: 10px 20px 10px 40px;
+			font-family: Arial;
+			border-radius: 50px;
+			font-size: 15px;
+			background-image: url("sersh.jpg");
+			background-repeat: no-repeat;
+			background-size: 40px;
+			background-position: 0;
+			cursor: pointer;
+		}
+		.navi input:hover{
+			border: 1px solid royalblue;
+		}
+		.navi{
+			top: 0;
+			width: 100%;
+			height: 60px;
+			background-color: steelblue;
+			position: fixed;
+			padding: 10px 0 4px 10px;
+
+		}
+		.logIn{
+			position: fixed;
+			left: 85%;
+			top: 30px;
+		}
+		.logIn a{
+			background: linear-gradient(steelblue, lightsteelblue);
+			padding: 10px 50px 10px 40px;
+			text-decoration: none;
+			font-family: Arial;
+			border-radius: 50px;
+			font-size: 15px;
+			color: white;
+		}
+		.logIn a:hover{
+			border: 0px solid white;
+			text-transform: uppercase;
+		}
+		.fas{
+			font-size: 12px;
+			margin-inline: 3px;
+		}
+		.navLow{
+			margin: 80px 0 0 1100px;
+		}
+		.mySlides {
+			display: none
+		}
+		.mySlides img{
+			width: 100%;
+			height: 1000px;
+			border-bottom: 2px solid white;
+		}
+		.slideshow-container {
+ 		    max-width: 100%;
+ 		   	top: 2%;
+		}
+		.next {
+  			right: 0;
+ 				border-radius: 3px 0 0 3px;
+		}
+		.prev:hover, .next:hover {
+  			background-color: white;
+  			color: black;
+  		}
+		.prev, .next{
+  			cursor: pointer;
+  			position: absolute;
+  			top: 350px;
+  			width: auto;
+  			padding: 10px;
+  			color: white;
+  			font-weight: bold;
+  			font-size: 26px;
+  			border-radius: 0 3px 3px 0;
+  			user-select: none;
+		}
+		.form{
+			left: 450px;
+			top: 100px;
+			width: 500px;
+			height: 500px;
+			padding: 50px;
+			background: repeating-linear-gradient(steelblue, lightsteelblue,steelblue);
+			position: fixed;
+			border: 2px solid white;
+			border-radius: 50px;
+		}
+		.form input:hover{
+			border: 2px solid deepskyblue;
+		}
+		#pwd{
+			position: absolute;
+			left: 220px;
+			top: 230px;
+			border-radius: 30px;
+			padding: 5px;
+		}
+		#email{
+			position: absolute;
+			left: 220px;
+			top: 190px;
+			border-radius: 30px;
+			padding: 5px;
+		}
+		.form label{
+			position: relative;
+			top: 80px;
+			left: 50px;
+			font-family: Arial;
+			color: white;
+		}
+		#key{
+			padding: 15px 35px 15px 25px;
+			position: absolute;
+			top: 300px;
+			left: 240px;
+			text-decoration: none;
+			font-size: 15px;
+			background-color: royalblue;
+			font-family: Arial;
+			border-radius: 40px;
+			color: white;
+		}
+		.form p{
+			font-family: Arial;
+			font-size: 20px;
+			position: absolute;
+			left: 250px;
+			top: 380px;
+			color: white;
+		}
+		#key:hover{
+			background-color: limegreen;
+		}
+		.fa {
+  		padding: 20px;
+  		font-size: 30px;
+  		width: 30px;
+  		text-align: center;
+  		text-decoration: none;
+  		position: relative;
+  		top: 270px;
+  		left: 80px;
+  		margin-inline: 5px;
+		}
+
+		.fa:hover {
+    	opacity: 0.7;
+		}
+
+		.fa-facebook {
+  		background: none;
+  		color: white;
+  		border-radius: 50%;
+		}
+		.fa-twitter {
+  		background: none;
+  		color: white;
+  		border-radius: 50%;
+		}
+		.fa-snapchat-ghost {
+  		background: none;
+  		color: white;
+  		border-radius: 50%;
+  		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+		}
+		.fa-google {
+  		background: none;
+  		color: white;
+  		border-radius: 50%;
+		}
+		#close{
+			position: absolute;
+			left: 550px;
+			top: 25px;
+			color: white;
+			cursor: pointer;
+		}
+		#close:hover{
+			color: black;
+		}
+		.form img{
+			width: 60px;
+			height: 60px;
+			border-radius: 360px;
+			border: 2px solid black;
+			position: relative;
+			left: 140px;
+			top: 40px;
+		}
+		.form h1{
+			position: absolute;
+			left: 260px;
+			top: 80px;
+			font-family: Arial;
+			color: white;
+		}
+
+	</style>
+</head>
+<body>
+
+<div class="navi">
+
+<img src="system.PNG">
+<h3>Consultation Booking</h3>
+<h5>HEALTH CARE</h5>
+
+<input type="text" placeholder="Search..."></input>
+
+<ul>
+	<li>About Us</li>
+	<li>Help</li>
+	<li>News</li>
+</ul>
+
+</div>
+
+<div class="logIn">
+	<a href="#"><i class='fas fa-lock'></i>  Log In</a>
+</div>
+
+</div>
+
+<div class="form">
+
+	<img src="system.png">
+	<h1>SIGN IN</h1>
+
+<form>
+
+	<a href="index.html" id="close"><i class="material-icons">close</i></a>
+
+  <label for="email">Email:</label>
+
+  <input type="email" id="email" name="email"><br><br>
+
+  <label for="pwd">Password:</label>
+
+  <input type="password" id="pwd" name="pwd" minlength="8"><br><br>
+
+</form>
+
+	<p>Log In Via</p>
+
+	<a href="dashboard.html" id="key"><i class='fas fa-lock'></i>  Log In</a>
+
+	<a href="https://www.facebook.com/" target="_blank" class="fa fa-facebook"></a>
+	<a href="https://x.com//" target="_blank" class="fa fa-twitter"></a>
+	<a href="https://www.snapchat.com/" target="_blank" class="fa fa-snapchat-ghost"></a>
+	<a href="https://accounts.google.com/" target="_blank" class="fa fa-google"></a>
+
+
+</div>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="wan.jpg">
+</div>
+
+<div class="mySlides fade">
+  <img src="first.jpg">
+</div>
+
+<div class="mySlides fade">
+  <img src="third.jpg">
+</div>
+
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+
+
+</body>
+</html>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
